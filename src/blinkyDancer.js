@@ -12,8 +12,6 @@ makeBlinkyDancer.prototype.step = function() {
   
   
   makeDancer.prototype.step.call(this);
-  
-  
   this.$node.toggle();
   // call the old version of step at the beginning of any call to this new version of step
   //this.$node = makeDancer.$node;

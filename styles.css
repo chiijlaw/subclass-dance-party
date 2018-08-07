@@ -1,10 +1,12 @@
 body, html{
+
   height:100%;
 }
 body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background-image: url(https://i.pinimg.com/originals/b0/d2/17/b0d217836aedf6b8256e55f28a1ea652.jpg);
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
