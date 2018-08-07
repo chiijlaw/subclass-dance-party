@@ -1,6 +1,8 @@
 var makePencilDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<iframe src="https://giphy.com/embed/26DMUltMNOQYp3nry" width="264" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/dance-dancing-26DMUltMNOQYp3nry"></a></p>');
+  this.$node.attr('src', 'pencil.gif');
+  this.$node.attr('class', 'dancer giphy-embed pencil');
+  //this.$node.append('<iframe src="https://giphy.com/embed/26DMUltMNOQYp3nry" width="264" height="480" frameBorder="0" class="giphy-embed" id="pencil" allowFullScreen></iframe>');
 };
 
 makePencilDancer.prototype = Object.create(makeDancer.prototype);

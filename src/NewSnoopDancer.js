@@ -1,6 +1,10 @@
 var makeSnoopDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<iframe src="https://giphy.com/embed/TeBpzQZRaBIC4" width="234" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/dancing-transparent-TeBpzQZRaBIC4"></a></p>');
+  //this.$node.append('<iframe src="https://giphy.com/embed/TeBpzQZRaBIC4" width="234" height="480" frameBorder="0" class="giphy-embed dancer" id="snoop" ></iframe>');
+  this.$node.attr('src', 'snoop.gif');
+  this.$node.attr('class', 'dancer giphy-embed snoop');
+  //this.$node.append('<img src = snoop.gif></img>');
+  
 };
 
 makeSnoopDancer.prototype = Object.create(makeDancer.prototype);
