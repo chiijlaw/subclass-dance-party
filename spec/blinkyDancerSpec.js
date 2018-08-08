@@ -12,6 +12,16 @@ describe('blinkyDancer', function() {
     expect(blinkyDancer.$node).to.be.an.instanceof(jQuery);
   });
 
+  it('timeBetweenSteps for blinkyDancer should be 100', function() {
+    expect(blinkyDancer.tbs).to.be.equal(100);
+  });
+
+  it('position for blinkyDancer should be set', function() {
+    var position = blinkyDancer.$node.position();
+    expect(typeof position.top).to.be.equal('number');
+    expect(typeof position.left).to.be.equal('number');
+  });
+
   it('should have a step function that makes its node blink', function() {
     sinon.spy(blinkyDancer.$node, 'toggle');
     blinkyDancer.step();

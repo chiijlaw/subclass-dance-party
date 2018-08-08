@@ -43,6 +43,10 @@ $(document).ready(function() {
     $(".blinky").animate({ top: "300px" }, 2000);
   });
 
+  $('.center').on('click', function(event) {
+    $(".dancer").animate({top: "300px"}, 2000); 
+  });
+
   $('.conga').on('click', function(event) {
     var topDir = -1;
     var leftDir = -1;

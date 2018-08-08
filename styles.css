@@ -7,20 +7,26 @@ body{
   background-color:#444;
   font-size: 18px;
   background-image: url(https://i.pinimg.com/originals/b0/d2/17/b0d217836aedf6b8256e55f28a1ea652.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: #322727;
+  font-family: 'Luckiest Guy';
 }
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
 }
-.topbar{
-  height:32px;
-  background-color: #555;
+.topbar {
+  display: flex;
+  justify-content: center;
+  height: 120px;
+  overflow: hidden; 
 }
-.title{
-  background-color: #777;
+.title {
+  font-size: 90px;
 }
 .blinky {
   border:10px solid red;
@@ -37,4 +43,35 @@ body, a:link, a:visited, a:active{
   width: 120px;
   height: auto;
   position: absolute;
+}
+.button {
+  height: 28px;
+  padding: 10px;
+  border: solid 4px;
+  display: inline-block; /*width:120px;  margin: 10px;*/
+  background-color: #9d678cc2;
+  /*text-align: justify;*/
+  border-radius: 25px;
+  border-color: #800020;
+  font-size: 24px;
+  text-overflow: hidden;
+}
+
+#center-justified {
+  text-align: justify;
+  margin: 0 auto;
+  width: 30em;*/
+}
+.flash {
+   animation-name: flash;
+    animation-duration: 612ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+@keyframes flash {
+    from {color: red;}
+    to {color: black;}
 }

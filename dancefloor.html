@@ -3,6 +3,7 @@
   <head>
     <title>Object Dance Party</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
     <link rel= "art" href="art"/>      
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
@@ -10,15 +11,20 @@
     <script src="src/NewSnoopDancer.js"></script>
     <script src="src/NewCatDancer.js"></script>  
     <script src="src/NewPencilDancer.js"></script>
+    <audio controls loop>
+    <source src="lib/Art/DropItLoop.mp3" type="audio/mpeg" align="center">
+    <embed height="60" type="audio/midi" width="144"  src="lib/Art/DropItLoop.mp3" volume="80" loop="true" autostart="true"/>
+    </audio>
 </head>
   <body>
     <div class="topbar">
-      <span class="title">object dance party</span><b />
+      <span class="title flash">DROP IT LIKE ITS HOT!</span><b />
       <!-- <a href="#" class="addDancerButton button" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a> -->
-      <a href="#" class="addDancerButton button" data-dancer-maker-function-name="makeSnoopDancer">Snoop!</a>     
-      <a href="#" class="addDancerButton button" data-dancer-maker-function-name="makeCatDancer">Cat!</a>
-      <a href="#" class="addDancerButton button" data-dancer-maker-function-name="makePencilDancer">Mr. Pencil!</a>   
-      <a href="#" class="lineUp button">Liner Up!</a>
+      <a href="#" class="addDancerButton button" "center-justified" data-dancer-maker-function-name="makeSnoopDancer">Snoop!</a>     
+      <a href="#" class="addDancerButton button" "center-justified" data-dancer-maker-function-name="makeCatDancer">Cat!</a>
+      <a href="#" class="addDancerButton button" "center-justified" data-dancer-maker-function-name="makePencilDancer">Mr. Pencil!</a>   
+      <a href="#" class="lineUp button">Line Up!</a>
+      <a href="#" class="center button">Center!</a>
       <a href="#" class="conga button">Conga Line!</a>
 </div>
     <script src="src/init.js"></script>
