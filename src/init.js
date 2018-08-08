@@ -2,6 +2,7 @@
 
 $(document).ready(function() {
   window.dancers = [];
+  var sorted = false;
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -30,19 +31,50 @@ $(document).ready(function() {
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+    window.dancers.push(dancer.$node);
     $("body").append(dancer.$node);
 
   });
   
   $('.lineUp').on('click', function(event) {
-    $(".dancer").animate({ top: "300px" }, 2000);
+    $(".snoop").animate({ top: "400px" }, 2000);
+    $(".pencil").animate({ top: "100px" }, 2000);
+    $(".cat").animate({ top: "600px" }, 2000);
+    $(".blinky").animate({ top: "300px" }, 2000);
   });
 
-  $('.battle').on('click', function(event) {
-    debugger;
-    for (var i = 0; i < window.dancers.length; i++) {
-      window.dancers[i];
-    }
+  $('.conga').on('click', function(event) {
+    var topDir = -1;
+    var leftDir = -1;
+    var conga = function() {
+      if (sorted === false) {
+        window.dancers.sort(function(a, b) {
+          return a.position().left - b.position().left;
+        });
+        sorted = true;
+      }
+      for (var i = 0; i < window.dancers.length; i++) {
+        if (i >= window.dancers.length - 1) {
+          var oldLeft = window.dancers[i].position().left;
+          var oldTop = window.dancers[i].position().top;
+          if (oldTop < 10) {
+            topDir = 1;
+          } else if (oldLeft < 10) {
+            leftDir = 1;
+          } else if (oldTop > 600) {
+            topDir = -1;
+          } else if (oldLeft > 800) {
+            leftDir = -1;
+          }
+          var newPos = {top: (oldTop += Math.random() * 80 * topDir) + 'px', left: (oldLeft += Math.random() * 100 * leftDir) + 'px'};
+        } else {
+          var newPos = window.dancers[i + 1].position();
+        }
+        $(window.dancers[i]).animate(newPos, 1224);
+      }
+      setTimeout(conga.bind(this), 1224);
+    };
+    conga.call(this);
   });
 
   $(document).on({
